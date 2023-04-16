@@ -22,24 +22,34 @@
         class="navigation flex justify-between mx-auto p-5 px-10 items-center lg:px-20 xl:px-16 w-full"
       >
         <div class="w-36">
-          <img src="img/logo.png" alt="" />
+          <img
+            src="img/logo.png"
+            alt=""
+            class="transition-opacity duration-300"
+          />
         </div>
 
         <div class="hidden lg:flex">
           <ul class="flex justify-between space-x-10 text-base text-gray-800">
             <li>
-              <a href="#">Features</a>
+              <a href="#" class="nav-link transition-opacity duration-300"
+                >Features</a
+              >
             </li>
             <li>
-              <a href="#">Operations</a>
+              <a href="#" class="nav-link transition-opacity duration-300"
+                >Operations</a
+              >
             </li>
             <li>
-              <a href="#">Testimonials</a>
+              <a href="#" class="nav-link transition-opacity duration-300"
+                >Testimonials</a
+              >
             </li>
             <li>
               <a
                 href="#"
-                class="btn openmodal bg-primary py-3.5 px-5 rounded-full"
+                class="nav-link btn openmodal bg-primary py-3.5 px-5 rounded-full transition-opacity duration-300"
                 >Open account</a
               >
             </li>
@@ -49,7 +59,7 @@
         <!-- hamburger menu -->
         <button
           id="menu-btn"
-          class="hamburger block fixed focus:outline-none lg:hidden z-30"
+          class="nav-link hamburger block fixed focus:outline-none lg:hidden z-30 transition-opacity duration-300"
         >
           <span class="hamburger-top"></span>
           <span class="hamburger-middle"></span>
@@ -60,20 +70,34 @@
 
         <div
           id="menu"
-          class="hidden fixed p-6 bg-gray-800 inset-0 h-0 w-full z-20 backdrop-blur-sm transition-all duration-300 bg-opacity-90"
+          class="hidden fixed p-6 bg-gray-800 inset-0 h-0 w-full z-20 backdrop-blur-3xl transition-all duration-300 bg-opacity-90"
         >
           <div
-            class="flex flex-col items-center justify-center w-full space-y-10 font-bold text-white rounded-sm mt-20"
+            class="z-20 flex flex-col items-center justify-center w-full space-y-10 font-bold text-white rounded-sm mt-20"
           >
-            <a href="" class="w-full text-center">Features</a>
-            <a href="" class="w-full text-center">Operations</a>
-            <a href="" class="w-full text-center">testimonials</a>
-            <a href="" class="w-full text-center pt-6 border-t border-gray-200"
+            <a
+              href="#"
+              class="z-20 nav-link transition-opacity duration-300 w-full text-center"
+              >Features</a
+            >
+            <a
+              href="#"
+              class="z-20 nav-link transition-opacity duration-300 w-full text-center"
+              >Operations</a
+            >
+            <a
+              href="#"
+              class="z-20 nav-link transition-opacity duration-300 w-full text-center"
+              >testimonials</a
+            >
+            <a
+              href="#"
+              class="nav-link transition-opacity duration-300 w-full text-center pt-6 border-t border-gray-200"
               >Login</a
             >
             <a
               href=""
-              class="btn openmodal text-center bg-primary py-3.5 px-5 rounded-full"
+              class="nav-link transition-opacity duration-300 btn openmodal text-center bg-primary py-3.5 px-5 rounded-full"
               >Open account</a
             >
           </div>
@@ -110,14 +134,16 @@
 
     <section
       id="#features"
-      class="section border-t-2 border-gray-200 pt-20 px-5 md:px-20 pb-52 duration-1000"
+      class="section border-t-2 border-gray-200 pt-20 px-5 md:px-20 pb-52 fade-in duration-1000"
     >
       <!-- features container -->
       <div
         class="container flex flex-col mx-auto max-w-7xl lg:px-10 space-y-36"
       >
         <!-- features heading -->
-        <div class="flex flex-col items-start w-full md:px-10">
+        <div
+          class="flex flex-col space-y-5 items-start max-w-4xl mx-auto md:px-10"
+        >
           <h3 class="text-xl font-bold text-primary">FEATURES</h3>
           <h2 class="text-3xl md:text-4xl text-gray-700">
             Everything you need in a modern bank and more.
@@ -223,6 +249,152 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
                   alias sint quos? Accusantium a fugiat porro reiciendis saepe
                   quibusdam debitis ducimus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- operation section -->
+    <section
+      id="#operations"
+      class="section border-t-2 border-gray-200 pt-20 px-5 md:px-20 pb-52 duration-1000"
+    >
+      <!-- operations container -->
+      <div
+        class="container flex flex-col mx-auto max-w-7xl lg:px-10 space-y-36"
+      >
+        <!-- operations heading -->
+        <div
+          class="flex flex-col space-y-5 items-start max-w-4xl mx-auto md:px-10"
+        >
+          <h3 class="text-xl font-bold text-primary">OPERATIONS</h3>
+          <h2 class="text-3xl md:text-4xl text-gray-700">
+            Everything as simple as possible, but no simpler.
+          </h2>
+        </div>
+
+        <!-- main operations section -->
+        <div
+          class="container flex flex-col mx-auto max-w-4xl bg-white space-y-10 rounded-lg pt-10 pb-10 md:pt-0"
+        >
+          <!-- bottons container -->
+          <div
+            class="tab-container flex flex-col max-w-2xl mx-auto md:flex-row justify-between space-y-5 md:space-y-0 md:w-full -mt-6"
+          >
+            <button
+              class="tab-btn bg-secondary hover:bg-secondaryDarker duration-300 transition-all py-2 px-8 md:px-5 lg:px-8 rounded-full"
+              data-tab="1"
+            >
+              <span class="mr-2">01</span>Instant Transfers
+            </button>
+            <button
+              class="tab-btn bg-primary hover:bg-primaryDarker duration-300 transition-all py-2 px-8 md:px-5 lg:px-8 rounded-full active-tab"
+              data-tab="2"
+            >
+              <span class="mr-2">02</span>Instant Loans
+            </button>
+            <button
+              class="tab-btn bg-tertiary hover:bg-tertiaryDarker duration-300 transition-all py-2 px-8 md:px-5 lg:px-8 rounded-full"
+              data-tab="3"
+            >
+              <span class="mr-2">03</span>Instant Closing
+            </button>
+          </div>
+
+          <!-- content container 1 -->
+          <div
+            class="tab-content tab-content-1 flex flex-row space-x-5 md:space-x-10 justify-between md:px-5 text-gray-700 hidden"
+          >
+            <div class="flex justify-center w-[15%]">
+              <div
+                class="bg-secondaryOpacity h-14 w-14 text-center flex items-center justify-center rounded-full"
+              >
+                <svg class="w-8 h-8 fill-secondary">
+                  <use xlink:href="img/icons.svg#icon-upload"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- content -->
+            <div class="flex flex-col space-y-5">
+              <div>
+                <h3 class="text-xl md:text-2xl text-gray-800">
+                  Transfer money to anyone, instantly! No fees, no BS
+                </h3>
+              </div>
+              <div>
+                <p class="md:text-lg text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- content container 2 -->
+          <div
+            class="tab-content tab-content-2 flex flex-row space-x-5 md:space-x-10 justify-between md:px-5 text-gray-700"
+          >
+            <div class="flex justify-center w-[15%]">
+              <div
+                class="bg-primaryOpacity h-14 w-14 text-center flex items-center justify-center rounded-full"
+              >
+                <svg class="w-8 h-8 fill-primary">
+                  <use xlink:href="img/icons.svg#icon-home"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- content -->
+            <div class="flex flex-col space-y-5">
+              <div>
+                <h3 class="text-xl md:text-2xl text-gray-800">
+                  Buy a home or make your dreams come true, with instant loans.
+                </h3>
+              </div>
+              <div>
+                <p class="md:text-lg text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- content container 3 -->
+          <div
+            class="tab-content tab-content-3 flex flex-row space-x-5 md:space-x-10 justify-between md:px-5 text-gray-700 hidden"
+          >
+            <div class="flex justify-center w-[15%]">
+              <div
+                class="bg-tertiaryOpacity h-14 w-14 text-center flex items-center justify-center rounded-full"
+              >
+                <svg class="w-8 h-8 fill-tertiary">
+                  <use xlink:href="img/icons.svg#icon-user-x"></use>
+                </svg>
+              </div>
+            </div>
+
+            <!-- content -->
+            <div class="flex flex-col space-y-5">
+              <div>
+                <h3 class="text-xl md:text-2xl text-gray-800">
+                  No longer need your account? No problem! Close it instantly.
+                </h3>
+              </div>
+              <div>
+                <p class="md:text-lg text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
               </div>
             </div>
