@@ -77,22 +77,28 @@ nav.addEventListener("mouseover", hoverfade.bind(0.5));
 nav.addEventListener("mouseout", hoverfade.bind(1));
 
 // // fade in animation
-const features = document.querySelector(".section");
+
+const sections = document.querySelectorAll(".section");
+// console.log(sections);
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
-  features.classList.remove("fade-in");
-  featuresObserver.unobserve(features);
+
+  entry.target.classList.remove("fade-in");
+  sectionObserver.unobserve(entry.target);
 };
 
-const featuresObserver = new IntersectionObserver(revealSection, {
+const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
   threshold: 0.15,
 });
 
-featuresObserver.observe(features);
+sections.forEach((sec) => {
+  sectionObserver.observe(sec);
+  sec.classList.add("fade-in");
+});
 
 // tab component reveal
 
@@ -121,3 +127,26 @@ tabsContainer.addEventListener("click", function (e) {
 
   // console.log(clicked);
 });
+
+// Lazy image
+
+const imgTarget = document.querySelectorAll("img[data-src]");
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  entry.target.src = entry.target.dataset.src;
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("blur-sm");
+  });
+  imageObserver.unobserve(entry.target);
+};
+
+const imageObserver = new IntersectionObserver(loadImg, {
+  threshold: 0,
+  root: null,
+  rootMargin: `100px`,
+});
+
+imgTarget.forEach((img) => imageObserver.observe(img));
