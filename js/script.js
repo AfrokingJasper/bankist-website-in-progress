@@ -28,27 +28,56 @@ closeModal.addEventListener("click", function () {
   overlay.classList.toggle("flex");
 });
 
-// fade in animation
-const features = document.querySelector(".section");
+// sticky navigation
+const nav = document.querySelector(".navigation");
+const header = document.querySelector("header");
+const navHeight = nav.getBoundingClientRect().height;
 
-const revealSection = function (entries, observer) {
+const stickyNav = function (entries) {
   const [entry] = entries;
 
-  if (!entry.isIntersecting) return;
-
-  entry.target.classList.remove("fade-in");
-  sectionObserver.unobserve(entry.target);
+  if (!entry.isIntersecting) {
+    nav.classList.add(
+      "fixed",
+      "bg-white",
+      "bg-opacity-90",
+      "top-0",
+      "left-0",
+      "right-0"
+    );
+  } else {
+    nav.classList.remove("fixed", "bg-white", "bg-opacity-90", "top-0");
+  }
 };
-
-const sectionObserver = new IntersectionObserver(revealSection, {
+const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
-  threshold: 0.15,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
 });
 
-sectionObserver.observe(features);
-features.classList.add("fade-in");
+headerObserver.observe(header);
 
-// features.forEach((section) => {
-//   sectionObserver.observe(section);
-//   section.classList.add("fade-in");
+// // fade in animation
+// const features = document.querySelector(".section");
+
+// const revealSection = function (entries, observer) {
+//   const [entry] = entries;
+
+//   if (!entry.isIntersecting) return;
+
+//   entry.target.classList.remove("fade-in");
+//   sectionObserver.unobserve(entry.target);
+// };
+
+// const sectionObserver = new IntersectionObserver(revealSection, {
+//   root: null,
+//   threshold: 0.15,
 // });
+
+// sectionObserver.observe(features);
+// features.classList.add("fade-in");
+
+// // features.forEach((section) => {
+// //   sectionObserver.observe(section);
+// //   section.classList.add("fade-in");
+// // });
