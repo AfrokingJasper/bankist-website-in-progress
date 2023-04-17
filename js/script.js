@@ -167,7 +167,7 @@ const goToSlide = function (slide) {
   );
 };
 
-goToSlide(2);
+// goToSlide(2);
 // btnLeft.addEventListener("click", function () {
 //   slides.
 // });
