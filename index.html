@@ -19,7 +19,7 @@
     <header class="header mx-auto relative pb-52">
       <!-- navigations -->
       <nav
-        class="navigation flex justify-between mx-auto p-5 px-10 items-center lg:px-20 xl:px-16 w-full"
+        class="navigation z-20 flex justify-between mx-auto p-5 px-10 items-center lg:px-20 xl:px-16 w-full"
       >
         <div class="w-36">
           <img
@@ -419,7 +419,7 @@
     </section>
 
     <!-- Testimonail Section -->
-
+    <!--  -->
     <section
       id="#testimonials"
       class="section border-t-2 border-gray-200 pt-20 px-5 md:px-20 pb-52 duration-1000"
@@ -439,28 +439,28 @@
         </div>
 
         <div
-          class="container mx-auto max-w-4xl py-10 md:pb-16 relative space-y-20 -z-10 flex flex-col md:flex-row space-x-10 md:overflow-hidden"
+          class="container mx-auto max-w-4xl py-10 md:pb-16 relative space-y-20 flex flex-col md:flex-row space-x-4 md:space-x-10 md:overflow-hidden"
         >
           <button
-            class="btn-left hidden lg:flex items-center justify-center text-4xl rounded-full absolute h-14 w-14 bg-white top-[50%] -translate-y-[50%]"
+            class="btn-left hidden md:flex z-10 items-center justify-center text-4xl rounded-full absolute h-14 w-14 bg-white top-[50%] -translate-y-[50%]"
           >
             &larr;
           </button>
-          <button
-            class="btn-right hidden lg:flex items-center justify-center text-4xl rounded-full absolute h-14 w-14 bg-white top-[50%] right-0 -translate-y-[50%]"
-          >
-            &rarr;
-          </button>
           <div
-            class="dots-container absolute hidden md:flex space-x-5 bottom-5 right-[50%] -translate-y-[50%]"
+            class="btn-right hidden md:flex z-10 items-center justify-center text-4xl rounded-full absolute h-14 w-14 bg-white top-[36%] right-0 -translate-y-[50%]"
           >
-            <div class="h-3 w-3 bg-gray-500 rounded-full"></div>
-            <div class="h-3 w-3 bg-gray-300 rounded-full"></div>
-            <div class="h-3 w-3 bg-gray-300 rounded-full"></div>
+            <button>&rarr;</button>
           </div>
 
+          <div
+            class="dots-container absolute hidden md:flex space-x-5 bottom-5 right-[50%] -translate-y-[50%]"
+          ></div>
+          <!-- <div class="h-3 w-3 bg-gray-500 rounded-full"></div>
+            <div class="h-3 w-3 bg-gray-300 rounded-full"></div>
+            <div class="h-3 w-3 bg-gray-300 rounded-full"></div> -->
+
           <!-- testimonial 1 -->
-          <div class="slide slide-1 min-w-full mx-auto lg:mx-10">
+          <div class="slide slide-1 min-w-full mx-auto lg:mx-10 duration-1000">
             <div
               class="container mx-auto flex flex-col bg-whit space-y-8 pr-10 md:px-20 relative max-w-3xl"
             >
@@ -470,6 +470,20 @@
                 class="h-14 w-14 absolute -left-5 -top-7 -z-10"
               />
               <!-- <p class="text-7xl">&ldquo; &rdquo;</p> -->
+
+              <address
+                class="md:hidden md:ml-16 flex flex-row space-x-5 items-center"
+              >
+                <img
+                  src="img/user-1.jpg"
+                  alt=""
+                  class="h-16 w-16 rounded-full"
+                />
+                <div class="flex flex-col space-y-2">
+                  <h6>Aarav Lynn</h6>
+                  <p class="text-sm">San Francisco, USA</p>
+                </div>
+              </address>
               <h3 class="text-xl md:text-2xl text-gray-700">
                 Best financial decision ever
               </h3>
@@ -482,7 +496,9 @@
                 dolore veniam autem esse non voluptatem saepe provident nihil
                 molestiae.
               </blockquote>
-              <address class="ml-16 flex flex-row space-x-5 items-center">
+              <address
+                class="hidden md:ml-16 md:flex flex-row space-x-5 items-center"
+              >
                 <img
                   src="img/user-1.jpg"
                   alt=""
@@ -497,16 +513,30 @@
           </div>
 
           <!-- testimonial 2 -->
-          <div class="slide slide-2 min-w-full mx-auto lg:mx-10">
+          <div class="slide slide-2 min-w-full mx-auto lg:mx-10 duration-1000">
             <div
               class="container mx-auto flex flex-col bg-whit space-y-8 pr-10 md:px-20 relative max-w-3xl"
             >
               <img
                 src="img/quotation-mark-svgrepo-com.svg"
                 alt=""
-                class="h-14 w-14 absolute -left-5 -top-7 -z-10"
+                class="h-14 w-14 absolute -left-5 -top-7 -z-10 hidden md:flex"
               />
               <!-- <p class="text-7xl">&ldquo; &rdquo;</p> -->
+
+              <address
+                class="md:hidden md:ml-16 flex flex-row space-x-5 items-center"
+              >
+                <img
+                  src="img/user-2.jpg"
+                  alt=""
+                  class="h-16 w-16 rounded-full"
+                />
+                <div class="flex flex-col space-y-2">
+                  <h6>Miyah Miles</h6>
+                  <p class="text-sm">Miyah Miles London, UK</p>
+                </div>
+              </address>
               <h3 class="text-xl md:text-2xl text-gray-700">
                 The last step to becoming a complete minimalist
               </h3>
@@ -517,7 +547,9 @@
                 repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing
                 elit. Illo deserunt exercitationem deleniti.
               </blockquote>
-              <address class="ml-16 flex flex-row space-x-5 items-center">
+              <address
+                class="hidden md:ml-16 md:flex flex-row space-x-5 items-center"
+              >
                 <img
                   src="img/user-2.jpg"
                   alt=""
@@ -531,17 +563,32 @@
             </div>
           </div>
 
-          <!-- testimonial 2 -->
-          <div class="slide slide-3 min-w-full mx-auto lg:mx-10">
+          <!-- testimonial 3 -->
+          <div class="slide slide-3 min-w-full mx-auto lg:mx-10 duration-1000">
             <div
               class="container mx-auto flex flex-col bg-whit space-y-8 pr-10 md:px-20 relative max-w-3xl"
             >
               <img
                 src="img/quotation-mark-svgrepo-com.svg"
                 alt=""
-                class="h-14 w-14 absolute -left-5 -top-7 -z-10"
+                class="h-14 w-14 absolute -left-5 -top-7 -z-10 hidden md:flex"
               />
               <!-- <p class="text-7xl">&ldquo; &rdquo;</p> -->
+
+              <address
+                class="md:hidden md:ml-16 flex flex-row space-x-5 items-center"
+              >
+                <img
+                  src="img/user-3.jpg"
+                  alt=""
+                  class="h-16 w-16 rounded-full"
+                />
+                <div class="flex flex-col space-y-2">
+                  <h6>Francisco Gomes</h6>
+                  <p class="text-sm">Lisbon, Portugal</p>
+                </div>
+              </address>
+
               <h3 class="text-xl md:text-2xl text-gray-700">
                 Finally free from old-school banks
               </h3>
@@ -553,7 +600,9 @@
                 sunt, deleniti saepe aliquid quos inventore sequi.
                 Necessitatibus id alias reiciendis, perferendis facere.
               </blockquote>
-              <address class="ml-16 flex flex-row space-x-5 items-center">
+              <address
+                class="hidden md:ml-16 md:flex flex-row space-x-5 items-center"
+              >
                 <img
                   src="img/user-3.jpg"
                   alt=""
@@ -572,7 +621,7 @@
 
     <!-- overlay -->
     <div
-      class="overlay hidden fixed justify-center top-0 bottom-0 w-full min-h-screen bg-black opacity-90 items-center"
+      class="overlay hidden fixed justify-center z-20 top-0 bottom-0 w-full min-h-screen bg-black opacity-90 items-center"
     >
       <div
         class="relative flex flex-col bg-white font-bold text-gray-800 opacity-100 rounded-md mx-5 z-10 pt-14 p-10 md:p-14 lg:max-w-xl"
