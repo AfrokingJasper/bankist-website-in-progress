@@ -76,29 +76,29 @@ const hoverfade = function (e, opacity) {
 nav.addEventListener("mouseover", hoverfade.bind(0.5));
 nav.addEventListener("mouseout", hoverfade.bind(1));
 
-// // fade in animation
+// // // fade in animation
 
-const sections = document.querySelectorAll(".section");
-// console.log(sections);
+// const sections = document.querySelectorAll(".section");
+// // console.log(sections);
 
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
+// const revealSection = function (entries, observer) {
+//   const [entry] = entries;
 
-  if (!entry.isIntersecting) return;
+//   if (!entry.isIntersecting) return;
 
-  entry.target.classList.remove("fade-in");
-  sectionObserver.unobserve(entry.target);
-};
+//   entry.target.classList.remove("fade-in");
+//   sectionObserver.unobserve(entry.target);
+// };
 
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.15,
-});
+// const sectionObserver = new IntersectionObserver(revealSection, {
+//   root: null,
+//   threshold: 0.15,
+// });
 
-sections.forEach((sec) => {
-  sectionObserver.observe(sec);
-  sec.classList.add("fade-in");
-});
+// sections.forEach((sec) => {
+//   sectionObserver.observe(sec);
+//   sec.classList.add("fade-in");
+// });
 
 // tab component reveal
 
@@ -150,3 +150,24 @@ const imageObserver = new IntersectionObserver(loadImg, {
 });
 
 imgTarget.forEach((img) => imageObserver.observe(img));
+
+// slides
+
+const slides = document.querySelectorAll(".slide");
+const dotContainer = document.querySelector(".dots-container");
+const btnRight = document.querySelector(".btn-right");
+const btnLeft = document.querySelector(".btn-left");
+
+let currentSlide = 0;
+let maxSlide = slides.length;
+
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${105 * (i - slide)}%)`)
+  );
+};
+
+goToSlide(2);
+// btnLeft.addEventListener("click", function () {
+//   slides.
+// });
