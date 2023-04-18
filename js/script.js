@@ -3,6 +3,7 @@ const menu = document.getElementById("menu");
 const openModal = document.querySelectorAll(".openmodal");
 const overlay = document.querySelector(".overlay");
 const closeModal = document.querySelector(".close-modal");
+const navLinks = document.querySelectorAll(".nav-link");
 
 menuBtn.addEventListener("click", function () {
   menuBtn.classList.toggle("open");
@@ -26,6 +27,17 @@ openModal.forEach((btn) =>
 closeModal.addEventListener("click", function () {
   overlay.classList.toggle("hidden");
   overlay.classList.toggle("flex");
+});
+
+// scroll behaviours
+navLinks.forEach((navss) => {
+  navss.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (e.target.classList.contains("nav-link")) {
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
 
 // sticky navigation
@@ -195,8 +207,6 @@ document.addEventListener("keydown", function (e) {
     nextSlide();
   }
 });
-
-console.log(dotContainer);
 
 const createDots = function () {
   slides.forEach((s, i) => {
