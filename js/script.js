@@ -49,14 +49,7 @@ const stickyNav = function (entries) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) {
-    nav.classList.add(
-      "fixed",
-      "bg-white",
-      "bg-opacity-90",
-      "top-0"
-      // "left-0",
-      // "right-0"
-    );
+    nav.classList.add("fixed", "bg-white", "bg-opacity-90", "top-0");
   } else {
     nav.classList.remove("fixed", "bg-white", "bg-opacity-90", "top-0");
   }
@@ -134,10 +127,6 @@ tabsContainer.addEventListener("click", function (e) {
   document
     .querySelector(`.tab-content-${clicked.dataset.tab}`)
     .classList.remove("hidden");
-
-  // .classList.remove("hidden");
-
-  // console.log(clicked);
 });
 
 // Lazy image
@@ -169,8 +158,6 @@ const slides = document.querySelectorAll(".slide");
 const dotContainer = document.querySelector(".dots-container");
 const btnRight = document.querySelector(".btn-right");
 const btnLeft = document.querySelector(".btn-left");
-console.log(btnLeft);
-console.log(btnRight);
 
 let currentSlide = 0;
 let maxSlide = slides.length;
@@ -242,11 +229,8 @@ const activateDots = function (slide) {
     .querySelector(`.dots-h-3[data-slide='${slide}']`)
     .classList.add("bg-gray-500");
 };
-// createDots();
-// activateDots(0);
-const init = function () {
-  // goToSlide(0);
 
+const init = function () {
   createDots();
   activateDots(0);
 };
